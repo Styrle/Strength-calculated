@@ -1,0 +1,257 @@
+/* Global styling */
+@import url('https://fonts.googleapis.com/css2?family=B612&family=Open+Sans&family=Roboto&display=swap');
+
+body{
+  background-color: #f8f9fa
+
+}
+
+button {
+  font-family: 'B612', serif;
+  border-radius: 2px;
+}
+
+li {
+  padding-right:5px;
+  padding-left:5px;
+}
+
+a:hover {
+  color: black;
+  text-decoration: none;
+
+}
+/* Menu styling */
+/* This css allows us to have a button which looks normal to the rest of our links */
+.sign-out {
+  align-items: normal;
+  background-color: inherit;
+  color: #4F4F4F;
+  border-style: none;
+  display: inline;
+  -moz-appearance: none;
+  -webkit-logical-width: auto;
+  padding: 0px;
+}
+
+.sign-out:hover {
+  color: white;
+}
+.menu {
+  color: #4F4F4F;
+}
+
+.main-colour{
+  background-color: #41BCCC;
+}
+
+/*Adding our colour when the user either hovers or is actively on the selected pages */
+.menu:hover, .signOut:hover {
+  color:white;
+}
+
+.menu:active {
+  color:white;
+}
+
+.mobile-nav {
+  border-style: none;
+}
+
+/*Home page styling */
+/*Media queries allow us to better design for the web, using the same scale as our bootstrapped menu of medium to give us a max width */
+@media only screen and (max-width: 768px) {
+  .welcome {
+    text-align: center;
+  }
+}
+
+.gNLrQw {
+  padding-bottom: 6px;
+
+}
+
+.fmpvlt {
+  padding-top: 6px;
+}
+
+.home-table {
+  -webkit-box-shadow: 0px 10px 10px 5px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 10px 10px 5px rgba(0,0,0,0.3);
+  box-shadow: 0px 10px 10px 5px rgba(0,0,0,0.3);
+  font-size: 13px;
+  margin-top: 50px;
+}
+
+/*Progress page styling */
+.progress-chart {
+padding: 25px;
+}
+
+.c3-tooltip th {
+    background-color: #41BCCC !important;
+    color:black !important;
+}
+
+
+/*Add lifts page styling */
+
+@media only screen and (max-width: 985px) {
+.l-lifts{
+  display: none;
+  }
+}
+
+.l-lifts2{
+  text-align:left;
+  display:none;
+}
+
+@media only screen and (max-width: 985px) {
+.l-lifts2{
+  text-align:left;
+  display:inline;
+ }
+}
+
+.lift-font{
+  font-weight: bold;
+}
+
+.calculate-button{
+  float: left;
+  background-color: #3FBBCC;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top:5%;
+  transition: 0.3s;
+  color:#000000;
+  letter-spacing: 1px;
+
+}
+
+.calculate-button:hover{
+  background-color: #319FAE;
+
+  -webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.3);
+  box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.table-compound{
+  padding-left:50px;
+  padding-right: 50px;
+  margin: 20px;
+  -webkit-box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.3);
+  box-shadow: 0px 10px 10px 3px rgba(0,0,0,0.3);
+  font-size: 15px;
+  background-color: white;
+}
+
+.table th {
+  border-top: 0px;
+
+}
+
+.compound-title{
+  align:top;
+}
+
+.add-weight{
+  text-align:center;
+
+}
+
+.lift-input {
+  width: 50px;
+  height: 23px;
+}
+
+.lift-check{
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background-color: #eee;
+}
+
+.lift-check:hover input ~  {
+  background-color: #ccc;
+}
+
+.text-divider{
+  margin-top:50px;
+  padding-left: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+.text-divider{
+  margin-left: 0px;
+  }
+}
+
+/*Tools component styling */
+.table-tools{
+    margin: 30px;
+  -webkit-box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.3);
+  box-shadow: 0px 10px 10px 3px rgba(0,0,0,0.3);
+  font-size:13px;
+  background-color: white;
+}
+
+.recent{
+  margin-top: 20%;
+}
+
+.row-recent{
+  display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+}
+
+.recent-row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.progress-button{
+  float: left;
+  background-color: #3FBBCC;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top:20%;
+  margin-left: 30%;
+  transition: 0.3s;
+  color:#000000;
+  font-family: 'B612', serif;
+  font-weight: lighter;
+
+}
+
+
+.progress-button:hover{
+  background-color: #319FAE;
+
+  -webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.3);
+  box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}

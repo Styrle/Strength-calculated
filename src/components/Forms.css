@@ -1,0 +1,197 @@
+/* Global styling */
+@import url('https://fonts.googleapis.com/css2?family=B612&family=Open+Sans&family=Roboto&display=swap');
+
+body{
+  background-color: #f8f9fa
+
+}
+
+button {
+  font-family: 'B612', serif;
+  border-radius: 2px;
+}
+
+.title {
+  margin-top:280px;
+}
+
+@media only screen and (max-width: 768px) {
+  .title {
+    margin-top:0px;
+  }
+}
+
+.verticalh {
+  height:100vh;
+  width:40vh;
+  background-color: #40BCCD;
+  color: black;
+  font-size: 33px;
+  text-align:center;
+  vertical-align: middle;
+  float:left;
+  position: absolute;
+}
+
+@media only screen and (max-width: 768px) {
+  .verticalh {
+    height:0px;
+    text-align: center;
+    width:100%;
+    height: 50px;
+  }
+}
+
+.verticalh-icon{
+  height:200px;
+  width:200px;
+  margin-top:50px;
+
+}
+
+@media only screen and (max-width: 768px) {
+  .verticalh-icon {
+width:0px;
+height:0px;
+
+}
+}
+
+.Login, .Signup{
+  font-size:22px;
+  text-transform: uppercase;
+  }
+
+@media only screen and (max-width: 768px) {
+.Login, .Signup{
+  padding:1px;
+  }
+}
+
+.Container-form {
+  width: 450px;
+  background-color: white;
+  text-decoration: none;
+  text-align: center;
+  margin-left: 50%;
+  margin-top:300px;
+  padding: 35px;
+  position: absolute;
+  border: 1px solid rgba(0,0,0,0.3);
+  -webkit-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.3);
+  box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.3);
+}
+
+@media only screen and (max-width: 768px) {
+  .Container-form {
+   align-items: center;
+   margin: auto;
+   width: 90%;
+   border: 1px solid rgba(0,0,0,0.3);
+   padding: 55px;
+   margin-top:150px;
+   position: static;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .Container-form {
+   align-items: center;
+   margin: auto;
+   width: 90%;
+   border: 1px solid rgba(0,0,0,0.3);
+   padding: 55px;
+   margin-top:150px;
+   position: static;
+  }
+}
+
+.direct-buttons{
+  margin-bottom: 50px;
+}
+
+.form-group {
+  padding:8px;
+  width:90%;
+  margin: auto;
+}
+
+@media only screen and (max-width: 768px) {
+.form-group {
+  width:70%;
+  margin-top:50px;
+  margin: auto;
+  padding:15px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+.form-group {
+  width:100%;
+  margin: auto;
+  padding:10px;
+  }
+}
+
+.login-select, .signup-select {
+  color: black;
+  text-decoration: none;
+  padding:0px 20px 0px 20px;
+}
+
+.login-select:hover, .signup-select:hover  {
+  color: black;
+  text-decoration: none;
+
+}
+
+.login-active {
+  color: #319FAE;
+}
+
+.signup-active {
+  color: #319FAE;
+}
+
+.login-button {
+  border-radius: 3px;
+  border: none;
+  background: #40BCCD;
+  width: 20%;
+  padding: 5px;
+  color: #000000;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  float:left;
+  margin:20px 0px 0px 25px;
+}
+
+.signup-button {
+  border-radius: 3px;
+  border: none;
+  background: #40BCCD;
+  width: 40%;
+  padding: 5px;
+  color: #000000;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  float:left;
+  margin:20px 0px 0px 25px;
+}
+
+@media only screen and (max-width: 768px) {
+.login-button, .signup-button {
+  width:90%;
+  margin:0px;
+  float:none ;
+  }
+}
+
+.login-button:hover, .signup-button:hover {
+  background-color: #3AB1C1;
+  -webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
