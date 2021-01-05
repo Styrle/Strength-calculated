@@ -10,9 +10,9 @@ Visual data
 Custom strength calculations
 
 ### Technology used  
+ - React (Frontend)
+ - Express (Backend)
  - D3
  - Bootstrap
  - Sass
- - React (Frontend)
- - Express (Backend)
- -
+ 
