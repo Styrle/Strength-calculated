@@ -5,9 +5,9 @@ Created using the MERN stack and hosted on heroku
 ## Example  
 
 ## Features  
-Custom design
-Visual data
-Custom strength calculations
+Unique design  
+Visual data  
+Strength calculations  
 
 ### Technology used  
  - React (Frontend)
