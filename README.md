@@ -6,7 +6,7 @@ Created using the MERN stack and hosted on heroku
 
 ## Features  
 Unique design  
-Visual data  
+Data visulization  
 Strength calculations  
 
 ### Technology used  
