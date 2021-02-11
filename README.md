@@ -14,5 +14,7 @@ Strength calculations
  - Express (Backend)
  - D3
  - Bootstrap
- - Sass
+ - Sass  
  
+### Video  
+[![Strength Calculated Video](https://imgur.com/tGuk8w4.png)](https://www.youtube.com/watch?v=G0P27TlAoOY)
