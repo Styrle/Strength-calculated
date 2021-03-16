@@ -73,7 +73,7 @@ class AddLifts extends React.Component {
         return (
             <div>
               {this.state.redirectTo && <Redirect push to={this.state.redirectTo}/>}
-                <div className=" col-md-12">
+                <div className="col-md-12">
                     <div className="col-md-6">
                         <h3 className="mt-4">SELECT THE LIFTS THAT YOUR TRAIN</h3>
                         <h5 className="mt-4" style={{ fontWeight: "400" }}>PLEASE INPUT YOUR CURRENT PERSONAL BEST, ONE REP MAXIMUM YOU HAVE SET IN THE GYM</h5>

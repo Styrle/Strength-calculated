@@ -4,37 +4,37 @@ const Manager = {
     getLatestByUserId: async id => {
         const t = await Lift.find({ userId: id }).sort({datetime:-1}).limit(1);
         if (t === null)
-            return false;
+          return false;
 
         return t;
     },
     getLatestTwoByUserId: async id => {
-        const t = await Lift.find({ userId: id }).sort({datetime:-1}).limit(2);
-        if (t === null)
-            return false;
+      const t = await Lift.find({ userId: id }).sort({datetime:-1}).limit(2);
+      if (t === null)
+        return false;
 
-        return t;
+      return t;
     },
     getAllByUserId: async id => {
-        const t = await Lift.find({ userId: id }).sort({datetime:-1});
-        if (t === null)
-            return false;
+      const t = await Lift.find({ userId: id }).sort({datetime:-1});
+      if (t === null)
+        return false;
 
-        return t;
+      return t;
     },
     getByUserId: async id => {
-        const t = await Lift.find({ userId: id });
-        if (t === null)
-            return false;
+      const t = await Lift.find({ userId: id });
+      if (t === null)
+        return false;
 
-        return t;
+      return t;
     },
     add: async t => {
-        const r = await t.save();
-        if (r === null)
-            return false;
+      const r = await t.save();
+      if (r === null)
+        return false;
 
-        return r;
+      return r;
     }
 };
 

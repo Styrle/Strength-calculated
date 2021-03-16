@@ -7,11 +7,11 @@ router.post('/login', async (req, res) => {
     try {
         const user = await userManager.getByEmail(req.body.email);
         if (!user)
-            return res.status(400).send(`User does not exists with this email.`);
+          return res.status(400).send(`User does not exists with this email.`);
 
         const isValidPassword = await crypto.comparePassword(req.body.password, user.password);
         if (!isValidPassword)
-            return res.status(400).send(`Password did not match.`);
+          return res.status(400).send(`Password did not match.`);
 
         return res.status(200).send(user);
     } catch (ex) {
@@ -23,7 +23,7 @@ router.post('/signup', async (req, res) => {
     try {
         let user = await userManager.getByEmail(req.body.email);
         if (user)
-            return res.status(400).send(`User already exists with this email.`);
+          return res.status(400).send(`User already exists with this email.`);
 
         user = new User({
             name: req.body.name,
