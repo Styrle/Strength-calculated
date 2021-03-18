@@ -8,52 +8,52 @@ import session from '../services/session';
 import './Components.css';
 
 class Home extends React.Component {
-    constructor(props) {
-        super(props);
+  constructor(props) {
+    super(props);
 
-        this.state = {
-            lifts: [],
-            date: new Date(),
-        };
-        //Here we are loading our data and organising it as per the heviest lift for each lift name
-        if (!session.get('loggedIn'))
-            return;
-        else
-            (async () => {
-                await liftService.getAllByUserId(session.get('user')._id)
-                    .then(result => {
-                        if (result.error) {
-                            swalError(result.error);
-                            return;
-                        }
-                        //Getting our json data and seperating it from our long string to get individual pieces of data
-                        const data = result.data;
-                        if (data && data.length > 0) {
-                            var separateData = data.map((main, i) => {
-                                return JSON.parse(data[i].lifts).map(child => {
-                                    return {
-                                        date: main.datetime.slice(0, 10),
-                                        name: child.name,
-                                        weight: Number(child.weight)
-                                    }
-                                });
-                            })
-                            //Function will sort our heaviest lifts from eachother and make sure we display the heaviest lift within the database
-                            var mergedData = [].concat.apply([], separateData);
-                            var display = Object.values(mergedData.reduce((r, o) => {
-                                if (o.name in r) {
-                                    if (o.weight > r[o.name].weight)
-                                        r[o.name] = Object.assign({}, o);
-                                } else {
-                                    r[o.name] = Object.assign({}, o);
-                                }
-                                return r;
-                            }, {}));
-                            this.setState({ lifts: display || [] });
-                        }
-                    });
-            })();
-    }
+    this.state = {
+      lifts: [],
+      date: new Date(),
+    };
+    //Here we are loading our data and organising it as per the heviest lift for each lift name
+    if (!session.get('loggedIn'))
+      return;
+    else
+      (async () => {
+        await liftService.getAllByUserId(session.get('user')._id)
+            .then(result => {
+                if (result.error) {
+                  swalError(result.error);
+                  return;
+                }
+                //Getting our json data and seperating it from our long string to get individual pieces of data
+        const data = result.data;
+          if (data && data.length > 0) {
+            var separateData = data.map((main, i) => {
+              return JSON.parse(data[i].lifts).map(child => {
+                return {
+                  date: main.datetime.slice(0, 10),
+                  name: child.name,
+                  weight: Number(child.weight)
+                }
+            });
+          })
+          //Function will sort our heaviest lifts from eachother and make sure we display the heaviest lift within the database
+          var mergedData = [].concat.apply([], separateData);
+          var display = Object.values(mergedData.reduce((r, o) => {
+              if (o.name in r) {
+                if (o.weight > r[o.name].weight)
+                  r[o.name] = Object.assign({}, o);
+                } else {
+                    r[o.name] = Object.assign({}, o);
+                }
+                return r;
+                  }, {}));
+                this.setState({ lifts: display || [] });
+              }
+          });
+    })();
+  }
     //Rendering our data we have setup above
     render() {
       //Setting out our columns which will receive our data
