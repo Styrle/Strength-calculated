@@ -8,16 +8,16 @@ export default class {
     let result = {
       data: null,
       error: null
-        };
+    };
 
     await axios.post(`${config.api}/lifts/all`, {userId: userId})
       .then(resp => {
         if (resp.status === 200) {
           result.data = resp.data;
-          }
-        })
-        .catch((err) => {
-          result.error = err.response.data;
+        }
+      })
+      .catch((err) => {
+        result.error = err.response.data;
       });
     return result;
   }
@@ -40,9 +40,9 @@ export default class {
           result.data = resp.data;
           }
         })
-        .catch((err) => {
-          result.error = err.response.data;
-        });
+      .catch((err) => {
+        result.error = err.response.data;
+      });
       return result;
     }
 
@@ -93,9 +93,9 @@ export default class {
             result.data = resp.data;
           }
         })
-        .catch((err) => {
-          result.error = err.response.data;
-        });
+      .catch((err) => {
+        result.error = err.response.data;
+      });
       return result;
     }
   }
